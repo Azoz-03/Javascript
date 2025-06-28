@@ -1,50 +1,40 @@
-let num = Number("123");
-console.log("Converted to Number:", num);
-
-let randomNum = Math.random();
-let rounded = Math.round(3.6);
-let maxVal = Math.max(10, 20, 30);
-console.log("Random Number:", randomNum);
-console.log("Rounded:", rounded);
-console.log("Max Value:", maxVal);
-
-function calculateZakat(amount) {
-    const zakatRate = 0.025;
-    if (amount >= 1000) {
-        return amount * zakatRate;
-    } else {
-        return 0;
-    }
+function log(text) {
+  document.getElementById('output').textContent += text + "\n";
 }
 
-let myMoney = 5000;
-console.log("Zakat to pay:", calculateZakat(myMoney));
+document.getElementById('output').textContent = "";
 
-let numberValue = 456;
-let str1 = numberValue.toString();
-let str2 = String(numberValue);
-console.log("Number as string:", str1, str2);
+let numbers = [10, 20, 30, 40, 50];
+let sliced = numbers.slice(1, 4);
+let spliced = numbers.splice(2, 2);
 
-let greeting = "Hello, World!";
-console.log("Length:", greeting.length);
-console.log("Char at index 0:", greeting.charAt(0));
+log("Original array: " + numbers);
+log("Sliced (1,4): " + sliced);
+log("Spliced (from index 2): " + spliced);
+log("");
 
-let text = "JavaScript Programming";
-console.log("Slice (0,10):", text.slice(0, 10));
-console.log("Substring (0,10):", text.substring(0, 10));
-console.log("Substr (0,10):", text.substr(0, 10));
+let fruits = ["apple", "banana", "cherry", "orange"];
+log("Index of 'banana': " + fruits.indexOf("banana"));
+log("Includes 'cherry'? " + fruits.includes("cherry"));
+log("");
 
-let sentence = "Learning JavaScript is fun!";
-console.log("Index of 'JavaScript':", sentence.indexOf("JavaScript"));
-console.log("Includes 'fun':", sentence.includes("fun"));
+let scores = [88, 33, 100, 50, 75];
+scores.sort((a, b) => a - b);
+log("Sorted: " + scores);
+scores.reverse();
+log("Reversed: " + scores);
+log("");
 
-let fruits = ["apple", "banana", "cherry"];
-console.log("First fruit:", fruits[0]);
-console.log("All fruits:", fruits);
+let boys = ["Ali", "Omar"];
+let girls = ["Sara", "Aisha"];
+let all = boys.concat(girls);
+log("All: " + all);
+log("Joined with &: " + all.join(" & "));
+log("");
 
-fruits.push("orange");
-fruits.unshift("mango");
-fruits.pop();
-fruits.shift();
-
-console.log("Updated fruits:", fruits);
+let x = 10;
+let y = "10";
+log("x == y: " + (x == y));
+log("x === y: " + (x === y));
+log("x > 5: " + (x > 5));
+log("y <= 10: " + (y <= 10));
