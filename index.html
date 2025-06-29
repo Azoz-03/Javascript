@@ -2,32 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JS Code Output</title>
-  <style>
-    body {
-      font-family: monospace;
-      background-color: #f0f0f0;
-      padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    pre {
-      background: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      overflow-x: auto;
-      white-space: pre-wrap;
-    }
-  </style>
+  <title>Interactive Programming Panel</title>
 </head>
 <body>
+  <h1>JavaScript Control Panel</h1>
 
-  <h1>JavaScript Output</h1>
-  <pre id="output">Running...</pre>
+  <label>Enter a number:</label>
+  <input type="number" id="numInput">
+  <button onclick="process()">Check</button>
+
+  <div id="result"></div>
 
   <script src="test.js"></script>
 </body>
